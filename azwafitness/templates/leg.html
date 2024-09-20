@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+Leg
+{% endblock title %}
+{% block head %}
+<h1>Legs</h1>
+{% endblock head %}
+{% block body %}
+
+<div class="container mt-2">
+<Center><h1>Legs</h1></Center>
+<div class="row">
+
+
+{% for leg in legs  %}  
+<div class="col-md-4">
+
+
+    <div class="card">
+        <img src="{{leg.foto.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{leg.name}}</h5>
+          <p class="card-text">Mashq Vaxti:{{leg.time}}</p>
+          <h3 class="card-text">Trener:{{leg.trainer}}:opiti-{{leg.experience}}yil</h3>
+        </div>
+      </div>
+
+
+</div>
+{% endfor %}
+<br>
+<br>
+
+
+</div>
+</div>
+
+
+
+
+
+{% endblock body %}

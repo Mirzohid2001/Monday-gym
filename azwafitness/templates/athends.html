@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}
+Athends
+{% endblock title %}
+{% block head %}
+<h1>Athends</h1>
+{% endblock head %}
+{% block body %}
+
+<div class="container mt-2">
+<Center><h1>Athends</h1></Center>
+<div class="row">
+
+
+{% for athend in athends  %}  
+<div class="col-md-4">
+
+
+    <div class="card">
+        <img src="{{athend.picture.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{athend.name}}</h5>
+          <p class="card-text">About:{{athend.about}}</p>
+          <p class="card-text">Mashq Vaxti:{{athend.time}}</p>
+          <h3 class="card-text">Trener:{{athend.trainer}}:opiti-{{athend.experience}}yil</h3>
+        </div>
+      </div>
+
+
+</div>
+{% endfor %}
+<br>
+<br>
+
+
+</div>
+</div>
+
+
+
+
+
+{% endblock body %}
